@@ -255,6 +255,42 @@
       margin-bottom: 14px;
     }
 
+    .price {
+      font-size: 2.15rem;
+      line-height: 1;
+      margin: 12px 0 8px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .feature-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .small-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pricing-action {
+      margin-top: 22px;
+    }
+
     .notice {
       background: var(--soft-blue);
       border: 1px solid #cfe2ec;
@@ -329,6 +365,7 @@
       <nav>
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
+        <a href="#pricing">Pricing</a>
         <a href="#accountants">Accountants</a>
       </nav>
     </div>
@@ -441,6 +478,61 @@
           <h3>Export the pack</h3>
           <p>Create an accountant-ready ZIP export for review or record keeping.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="page" id="pricing">
+      <div class="section-title">
+        <h2>Early access pricing.</h2>
+        <p>
+          Quarterly pricing designed around the VAT filing cycle. Early access pricing may change as VATSorted is tested and refined with real UK VAT document workflows.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Starter</h3>
+          <div class="price">£29 <span>/ VAT quarter</span></div>
+          <p>For sole traders and very small VAT-registered businesses with straightforward paperwork.</p>
+          <ul class="feature-list">
+            <li>Up to 250 unique documents processed per VAT quarter</li>
+            <li>Manual PDF and ZIP upload</li>
+            <li>VAT quarter folders</li>
+            <li>Accountant ZIP export</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Standard</h3>
+          <div class="price">£59 <span>/ VAT quarter</span></div>
+          <p>For small businesses that need email scanning as well as manual document uploads.</p>
+          <ul class="feature-list">
+            <li>Up to 700 unique documents processed per VAT quarter</li>
+            <li>Gmail and Outlook attachment scans</li>
+            <li>Review categories for uncertain files</li>
+            <li>Accountant ZIP export</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Accountant</h3>
+          <div class="price">£149 <span>/ VAT quarter</span></div>
+          <p>For accountants or bookkeepers preparing document packs across multiple clients.</p>
+          <ul class="feature-list">
+            <li>2,000+ unique documents processed per VAT quarter</li>
+            <li>Multiple client workflows</li>
+            <li>Structured export folders</li>
+            <li>Priority early-access feedback</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="small-note">
+        Early access is by request. VATSorted prepares and organises VAT documents; it does not provide tax advice, verify VAT treatment, replace professional review, or submit VAT returns.
+      </p>
+
+      <div class="buttons pricing-action">
+        <a class="button primary" href="mailto:vatsorted@outlook.com?subject=VATSorted%20early%20access%20pricing">Request early access</a>
       </div>
     </section>
 

@@ -291,6 +291,44 @@
       margin-top: 22px;
     }
 
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--soft-green), var(--soft-blue));
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--green-dark);
+      font-weight: 900;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .play-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: white;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 12px;
+      box-shadow: 0 8px 20px rgba(23, 52, 45, 0.10);
+      color: var(--green-dark);
+      font-size: 1.1rem;
+    }
+
+    .trust-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .trust-list li {
+      margin-bottom: 10px;
+    }
+
     .notice {
       background: var(--soft-blue);
       border: 1px solid #cfe2ec;
@@ -365,6 +403,8 @@
       <nav>
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
+        <a href="#demo">Demo</a>
+        <a href="#privacy">Privacy</a>
         <a href="#pricing">Pricing</a>
         <a href="#accountants">Accountants</a>
       </nav>
@@ -477,6 +517,88 @@
           <div class="step">4</div>
           <h3>Export the pack</h3>
           <p>Create an accountant-ready ZIP export for review or record keeping.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="demo">
+      <div class="section-title">
+        <h2>Demo videos coming soon.</h2>
+        <p>
+          Short walkthrough videos will show exactly how VATSorted collects documents, sorts them into review categories, and creates an accountant-ready export.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="video-placeholder">
+            <div>
+              <div class="play-circle">▶</div>
+              Demo placeholder
+            </div>
+          </div>
+          <h3>Manual upload workflow</h3>
+          <p>Upload PDFs or ZIP files, review the sorted folders, and prepare the VAT document pack.</p>
+        </div>
+
+        <div class="card">
+          <div class="video-placeholder">
+            <div>
+              <div class="play-circle">▶</div>
+              Demo placeholder
+            </div>
+          </div>
+          <h3>Gmail and Outlook scans</h3>
+          <p>Connect email accounts, scan for VAT-related attachments, and keep uncertain files visible for checking.</p>
+        </div>
+
+        <div class="card">
+          <div class="video-placeholder">
+            <div>
+              <div class="play-circle">▶</div>
+              Demo placeholder
+            </div>
+          </div>
+          <h3>Accountant ZIP export</h3>
+          <p>Create a structured ZIP export that can be sent to your accountant or retained with your VAT records.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="privacy">
+      <div class="section-title">
+        <h2>Local and private by design.</h2>
+        <p>
+          VATSorted is designed as a local app, not a hosted accounting platform. The aim is to help organise VAT paperwork before review, while keeping the workflow simple and transparent.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Runs locally</h3>
+          <p>VATSorted runs on your own computer through a local browser-based Streamlit interface.</p>
+          <ul class="trust-list">
+            <li>Your working folders stay on your machine.</li>
+            <li>The app is not a cloud accounting portal.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Email access is for attachments</h3>
+          <p>Gmail and Outlook connections are used to find and download relevant VAT document attachments.</p>
+          <ul class="trust-list">
+            <li>The purpose is document collection, not reading personal correspondence.</li>
+            <li>Manual upload remains available if email scanning is not wanted.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Preparation, not submission</h3>
+          <p>VATSorted organises documents into folders and exports a review pack.</p>
+          <ul class="trust-list">
+            <li>It does not submit VAT returns to HMRC.</li>
+            <li>It does not replace accountant or bookkeeper review.</li>
+          </ul>
         </div>
       </div>
     </section>

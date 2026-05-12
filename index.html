@@ -61,7 +61,7 @@
 
     .logo {
       width: 42px;
-      height: 42px;
+      height: 76px;
       border-radius: 14px;
       background: linear-gradient(135deg, var(--green), var(--blue));
       color: white;
@@ -389,6 +389,20 @@
         margin-top: 22px;
       }
     }
+  
+    .brand-logo {
+      height: 76px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+      .brand-logo {
+        height: 56px;
+      }
+    }
+
   </style>
 </head>
 
@@ -396,8 +410,7 @@
   <header>
     <div class="page nav">
       <div class="brand">
-        <div class="logo">VS</div>
-        <div>VATSorted</div>
+        <img class="brand-logo" src="assets/vatsorted-logo-upscaled.png" alt="VATSorted logo">
       </div>
 
       <nav>

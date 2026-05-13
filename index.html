@@ -398,8 +398,8 @@
     }
   
     .brand-logo {
-      height: 76px;
-      width: auto;
+      width: 115px;
+      height: auto;
       display: block;
       object-fit: contain;
     }
@@ -509,13 +509,199 @@
     }
 
   </style>
+
+  <style id="vatsorted-pricing-badge-fix">
+    .planned-price {
+      display: inline-block !important;
+      margin: 0.45rem 0 0.65rem !important;
+      padding: 0.38rem 0.75rem !important;
+      border: 1px solid rgba(151, 61, 61, 0.35) !important;
+      border-radius: 999px !important;
+      background: rgba(151, 61, 61, 0.10) !important;
+      color: #7a2f2f !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+    }
+
+    .planned-price s {
+      color: #9b1c1c !important;
+      text-decoration-thickness: 2px !important;
+    }
+
+    .pricing-note {
+      display: inline-block !important;
+      margin-top: 1.25rem !important;
+      padding: 0.8rem 1rem !important;
+      border: 1px solid rgba(20, 94, 66, 0.22) !important;
+      border-radius: 14px !important;
+      background: rgba(20, 94, 66, 0.08) !important;
+      font-weight: 700 !important;
+      color: #123d35 !important;
+    }
+  </style>
+
+
+  <style id="vatsorted-header-spacing-fix">
+    header {
+      padding-bottom: 1.25rem !important;
+    }
+
+    .hero {
+      padding-top: 1.5rem !important;
+    }
+  </style>
+
+
+  <style id="vatsorted-final-polish">
+    .compact-section {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+
+    footer a {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+
+  <style id="vatsorted-output-preview-css">
+    .output-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .output-preview-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(15, 45, 35, 0.06);
+    }
+
+    .output-preview-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 0.32rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(31, 135, 92, 0.10);
+      color: var(--green);
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .output-preview-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .output-preview-card pre {
+      margin: 0;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(12, 52, 42, 0.045);
+      color: #173c35;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      border: 1px solid rgba(20, 94, 66, 0.10);
+    }
+
+    @media (max-width: 900px) {
+      .output-preview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+  <style id="vatsorted-review-first-polish">
+    .output-preview-label {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.25rem !important;
+      margin-bottom: 1rem !important;
+      padding: 0.42rem 0.85rem !important;
+      border-radius: 999px !important;
+      border: 1px solid rgba(31, 135, 92, 0.24) !important;
+      background: rgba(31, 135, 92, 0.14) !important;
+      color: #155f43 !important;
+      font-size: 0.9rem !important;
+      font-weight: 850 !important;
+      letter-spacing: 0.01em !important;
+    }
+
+    .review-first-section {
+      margin-top: 4.5rem !important;
+    }
+
+    .review-first-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 20px !important;
+      margin-top: 1.75rem !important;
+    }
+
+    .review-first-card {
+      background: white !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 22px !important;
+      padding: 24px !important;
+      box-shadow: 0 18px 45px rgba(15, 45, 35, 0.06) !important;
+    }
+
+    .review-first-card h3 {
+      margin-bottom: 0.65rem !important;
+    }
+
+    .review-first-card p {
+      margin-bottom: 0 !important;
+    }
+
+    .review-first-note {
+      margin-top: 1.35rem !important;
+      color: var(--muted) !important;
+      max-width: 850px !important;
+    }
+
+    @media (max-width: 850px) {
+      .review-first-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+
+  <style id="vatsorted-section-gap-polish">
+    /* Keep connected sections visually closer together */
+    .output-preview-section {
+      padding-bottom: 2.25rem !important;
+    }
+
+    .review-first-section {
+      padding-top: 1.25rem !important;
+    }
+
+    /* Avoid overly large empty vertical gaps between normal sections */
+    section.page {
+      margin-top: 0 !important;
+    }
+  </style>
+
 </head>
 
 <body>
   <header>
     <div class="page nav">
       <div class="brand">
-        <img class="brand-logo" src="assets/vatsorted-logo-upscaled.png" alt="VATSorted logo">
+        <img class="brand-logo" src="assets/VATSorted_Logo.jpg" alt="VATSorted logo">
       </div>
 
       <nav>
@@ -615,8 +801,8 @@
       <div class="steps">
         <div class="card">
           <div class="step">1</div>
-          <h3>Add documents</h3>
-          <p>Upload PDFs, ZIPs, Gmail, and Outlook attachments.</p>
+          <h3>Scan inboxes or upload files</h3>
+          <p>Scan Gmail and Outlook for VAT-related attachments, or add PDFs and ZIPs manually.</p>
         </div>
 
         <div class="card">
@@ -639,55 +825,99 @@
       </div>
     </section>
 
-    <section class="page" id="demo">
+    <section class="page output-preview-section" id="output-preview">
       <div class="section-title">
-        <h2>Product walkthroughs coming soon.</h2>
+        <h2>See what VATSorted produces.</h2>
         <p>
-          Short videos will show the manual upload, email scan, review, and ZIP export workflow before public launch.
+          VATSorted turns scattered PDFs, ZIP uploads, Gmail attachments, and Outlook attachments into review folders and a clean ZIP pack.
         </p>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <div class="video-placeholder">
-            <div>
-              <div class="demo-status">Walkthrough planned</div>
-              <div class="demo-note">Coming soon</div>
-            </div>
-          </div>
-          <h3>Manual upload workflow</h3>
-          <p>Upload PDFs and ZIP files, then review the sorted folders.</p>
+      <div class="output-preview-grid">
+        <div class="output-preview-card">
+          <span class="output-preview-label">1. Before</span>
+          <h3>Messy source files</h3>
+          <pre>Downloads/
+  invoice_123.pdf
+  scan.pdf
+  supplier_statement.pdf
+  proforma_order.pdf
+  unknown_receipt.pdf</pre>
         </div>
 
-        <div class="card">
-          <div class="video-placeholder">
-            <div>
-              <div class="demo-status">Walkthrough planned</div>
-              <div class="demo-note">Coming soon</div>
-            </div>
-          </div>
-          <h3>Gmail and Outlook scans</h3>
-          <p>Scan Gmail and Outlook for VAT-related attachments.</p>
+        <div class="output-preview-card">
+          <span class="output-preview-label">2. Sorted</span>
+          <h3>Review folders</h3>
+          <pre>Q1_2026/
+  Valid invoices/
+  Needs review/
+  Statements/
+  Pro forma/
+  Unknown date/quarter/</pre>
         </div>
 
-        <div class="card">
-          <div class="video-placeholder">
-            <div>
-              <div class="demo-status">Walkthrough planned</div>
-              <div class="demo-note">Coming soon</div>
-            </div>
-          </div>
-          <h3>Accountant ZIP export</h3>
-          <p>Create a clean ZIP pack for your accountant or records.</p>
+        <div class="output-preview-card">
+          <span class="output-preview-label">3. Export</span>
+          <h3>Accountant ZIP pack</h3>
+          <pre>VATSorted_Q1_2026.zip
+  summary.csv
+  organised PDFs
+  review folders
+  accountant-ready pack</pre>
         </div>
       </div>
+
+      <p class="small-note">
+        VATSorted prepares the document pack. Your accountant or bookkeeper still reviews VAT treatment and submits the return.
+      </p>
     </section>
+
+    <section class="page review-first-section" id="review-first">
+      <div class="section-title">
+        <h2>Review-first by design.</h2>
+        <p>
+          VATSorted does not pretend every file is correct. It organises the paperwork, keeps uncertain files visible, and prepares a cleaner pack for human review.
+        </p>
+      </div>
+
+      <div class="review-first-grid">
+        <div class="review-first-card">
+          <h3>Uncertain files stay visible</h3>
+          <p>Files with missing dates, unclear document types, or uncertain quarters are separated for review.</p>
+        </div>
+
+        <div class="review-first-card">
+          <h3>Cleaner accountant handover</h3>
+          <p>Documents are grouped before review, instead of being sent as a messy folder or mixed inbox download.</p>
+        </div>
+
+        <div class="review-first-card">
+          <h3>Preparation, not tax advice</h3>
+          <p>VATSorted prepares the document pack. Your accountant or bookkeeper still reviews VAT treatment and submits the return.</p>
+        </div>
+      </div>
+
+      <p class="review-first-note">
+        Missed or poorly organised VAT documents can mean extra admin, delayed reviews, or unclaimed input VAT. VATSorted is designed to make review easier, not to skip it.
+      </p>
+    </section>
+
+
+    <section class="page compact-section" id="demo">
+      <div class="section-title">
+        <h2>Product walkthroughs coming soon.</h2>
+        <p>
+          Short videos will show the manual upload, email scan, review, and ZIP export workflow before wider release.
+        </p>
+      </div>
+    </section>
+
 
     <section class="page" id="privacy">
       <div class="section-title">
         <h2>Local-first by design.</h2>
         <p>
-          VATSorted runs on your computer and creates review folders locally. Email access is optional and used for finding VAT-related attachments.
+          VATSorted runs on your computer and creates review folders locally. Email access is optional and used only to find VAT-related attachments.
         </p>
       </div>
 
@@ -703,7 +933,7 @@
 
         <div class="card">
           <h3>Email scanning is optional</h3>
-          <p>Gmail and Outlook are used to find and download VAT-related attachments.</p>
+          <p>Gmail and Outlook are used only to find and download VAT-related attachments.</p>
           <ul class="trust-list">
             <li>Manual upload remains available if you prefer not to connect email.</li>
             <li></li>
@@ -733,7 +963,7 @@
         <div class="card price-card">
           <h3>Starter</h3>
           <div class="price">£29 <span>/ VAT quarter</span></div>
-          <p class="planned-price">Planned standard price: <s>£49</s> / VAT quarter</p>
+          <p class="planned-price">Standard price after early access: £49 / VAT quarter</p>
           <p>For sole traders and very small VAT-registered businesses.</p>
           <ul class="feature-list">
             <li>Up to 300 documents</li>
@@ -747,10 +977,10 @@
         <div class="card price-card featured-plan">
           <div class="plan-topline">
             <h3>Standard</h3>
-            <span class="plan-badge">Best fit</span>
+            <span class="plan-badge">Most small businesses</span>
           </div>
           <div class="price">£59 <span>/ VAT quarter</span></div>
-          <p class="planned-price">Planned standard price: <s>£99</s> / VAT quarter</p>
+          <p class="planned-price">Standard price after early access: £99 / VAT quarter</p>
           <p>For most small VAT-registered businesses.</p>
           <ul class="feature-list">
             <li>Up to 1,000 documents</li>
@@ -764,7 +994,7 @@
         <div class="card price-card">
           <h3>Pro</h3>
           <div class="price">£99 <span>/ VAT quarter</span></div>
-          <p class="planned-price">Planned standard price: <s>£149</s> / VAT quarter</p>
+          <p class="planned-price">Standard price after early access: £149 / VAT quarter</p>
           <p>For higher-volume businesses with heavier VAT paperwork.</p>
           <ul class="feature-list">
             <li>Up to 3,000 documents</li>
@@ -778,12 +1008,12 @@
         <div class="card price-card">
           <h3>Accountant</h3>
           <div class="price">£199 <span>/ VAT quarter</span></div>
-          <p class="planned-price">Planned standard price: <s>£299</s> / VAT quarter</p>
+          <p class="planned-price">Standard price after early access: £299 / VAT quarter</p>
           <p>For accountants and bookkeepers preparing packs across clients.</p>
           <ul class="feature-list">
-            <li>Up to 10 client packs</li>
             <li>Up to 10,000 documents</li>
             <li>Gmail and Outlook scans</li>
+            <li>Review folders</li>
             <li>Structured ZIP exports</li>
             <li>Priority support</li>
           </ul>
@@ -791,7 +1021,8 @@
       </div>
 
       <p class="small-note">
-        Early access is by request. Pricing may change as the product is tested with real VAT document workflows.
+        Early access available for first 25 customers. Launch price protected for 12 months.<br>
+        Prices shown are total prices. VAT is not currently charged.
       </p>
 
       <div class="buttons pricing-action">
@@ -829,7 +1060,7 @@
       <div class="cta">
         <div>
           <h2>Spend less time finding VAT paperwork.</h2>
-          <p>VATSorted is being developed for UK small businesses and accountants who want cleaner document packs with less manual admin.</p>
+          <p>Built for small UK businesses and accountants that want cleaner VAT document packs before accountant review.</p>
         </div>
 
         <a class="button" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener">Request early access</a>
@@ -839,7 +1070,7 @@
 
   <footer>
     <div class="page">
-      VATSorted © 2026. VATSorted is a VAT document preparation tool, not accounting, tax, or VAT filing software.
+      VATSorted © 2026. VATSorted is a VAT document preparation tool, not accounting, tax, or VAT filing software.<br>Contact: <a href="mailto:support@vatsorted.com">support@vatsorted.com</a>
     </div>
   </footer>
 </body>

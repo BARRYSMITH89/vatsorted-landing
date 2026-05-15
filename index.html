@@ -1649,5 +1649,46 @@ document.addEventListener("DOMContentLoaded", function () {
 /* VATSorted audience toggle END */
 </script>
 
+
+<script>
+/* VATSorted dynamic video order START */
+document.addEventListener("DOMContentLoaded", function () {
+  const businessSection =
+    document.getElementById("business-owner-workflow") ||
+    document.getElementById("business-owners");
+
+  const accountantSection =
+    document.getElementById("accountant-workflow") ||
+    document.getElementById("accountants");
+
+  const buttons = document.querySelectorAll("[data-audience-target]");
+
+  if (!businessSection || !accountantSection || !buttons.length) return;
+
+  function moveSelectedVideoFirst(key) {
+    const selected = key === "business" ? businessSection : accountantSection;
+    const other = key === "business" ? accountantSection : businessSection;
+
+    if (!selected || !other || selected.parentNode !== other.parentNode) return;
+
+    selected.parentNode.insertBefore(selected, other);
+  }
+
+  function getSelectedAudience() {
+    const activeButton = document.querySelector("[data-audience-target].is-active");
+    return activeButton ? activeButton.dataset.audienceTarget : "accountants";
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      moveSelectedVideoFirst(button.dataset.audienceTarget);
+    });
+  });
+
+  moveSelectedVideoFirst(getSelectedAudience());
+});
+/* VATSorted dynamic video order END */
+</script>
+
 </body>
 </html>

@@ -800,7 +800,76 @@
 }
 /* VATSorted Enterprise pricing block END */
 
-</style>
+
+    .walkthrough-section {
+      width: min(100% - 2rem, 1120px);
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      padding-bottom: 4rem;
+    }
+
+    .walkthrough-video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .walkthrough-video-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 77, 68, 0.14);
+      border-radius: 1.25rem;
+      padding: 1rem;
+      box-shadow: 0 12px 30px rgba(15, 77, 68, 0.08);
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      border-radius: 1rem;
+      background:
+        linear-gradient(135deg, rgba(15, 77, 68, 0.08), rgba(36, 121, 109, 0.16));
+      border: 1px dashed rgba(15, 77, 68, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f4d44;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .walkthrough-video-card h3 {
+      margin: 0 0 0.5rem;
+      color: #103b36;
+      font-size: 1.15rem;
+    }
+
+    .walkthrough-video-card p {
+      margin: 0;
+      color: #52635f;
+      line-height: 1.6;
+    }
+
+    .walkthrough-video-card .video-note {
+      margin-top: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0f4d44;
+    }
+
+    .walkthrough-full-guide {
+      margin-top: 1.5rem;
+      max-width: 820px;
+      color: #52635f;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .walkthrough-video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 
   <style id="vatsorted-pricing-badge-fix">
     .planned-price {
@@ -1392,14 +1461,55 @@
     </section>
 
 
-    <section class="page compact-section" id="demo">
-      <div class="section-title">
-        <h2>Product walkthroughs coming soon.</h2>
+        <section class="section walkthrough-section" id="product-walkthroughs">
+      <div class="section-header">
+        <p class="eyebrow">Product demo videos</p>
+        <h2>See VATSorted in action.</h2>
         <p>
-          Short videos will show the manual upload, email scan, review, and ZIP export workflow before wider release.
+          Short walkthroughs showing manual upload, email scanning, review, and accountant-ready export.
         </p>
       </div>
+
+      <div class="walkthrough-video-grid">
+        <article class="walkthrough-video-card">
+          <div class="video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+          <h3>Manual upload walkthrough</h3>
+          <p>
+            Show users how to upload PDFs or ZIP files, run a scan, and see documents sorted into VAT quarters and review folders.
+          </p>
+          <p class="video-note">Recommended length: 45–75 seconds</p>
+        </article>
+
+        <article class="walkthrough-video-card">
+          <div class="video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+          <h3>Email scan walkthrough</h3>
+          <p>
+            Show Gmail or Outlook connection, scanning for VAT-related documents, and reducing manual inbox searching.
+          </p>
+          <p class="video-note">Recommended length: 60–90 seconds</p>
+        </article>
+
+        <article class="walkthrough-video-card">
+          <div class="video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+          <h3>Review and export walkthrough</h3>
+          <p>
+            Show valid invoices, needs-review items, statements, pro formas, and the final ZIP export for accountant review.
+          </p>
+          <p class="video-note">Recommended length: 45–75 seconds</p>
+        </article>
+      </div>
+
+      <p class="walkthrough-full-guide">
+        A full setup walkthrough will be available inside VATSorted for customers who need more detailed guidance.
+      </p>
     </section>
+
 
 
     <section class="page" id="privacy">

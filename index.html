@@ -871,6 +871,102 @@
 
   
 
+
+
+
+/* Real-world use case section */
+.use-case-section {
+  padding: 72px 24px;
+}
+
+.use-case-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.use-case-heading {
+  margin-bottom: 28px;
+}
+
+.use-case-heading h2 {
+  margin: 0 0 12px;
+  color: #102f25;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.use-case-heading p {
+  color: #334155;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 780px;
+}
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.use-case-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 61, 46, 0.12);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 24px 70px rgba(15, 61, 46, 0.08);
+}
+
+.use-case-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(16, 132, 89, 0.08);
+  color: #0f5132;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.use-case-card h3 {
+  margin: 0 0 16px;
+  color: #102f25;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.use-case-card p {
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.use-case-quote {
+  margin: 24px 0 22px;
+  padding: 22px 24px;
+  border-left: 5px solid #16845a;
+  background: #f5fbf7;
+  border-radius: 18px;
+  color: #102f25;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.use-case-person {
+  margin-top: 12px;
+  color: #334155;
+}
+
+.use-case-person strong {
+  color: #102f25;
+}
+
+@media (max-width: 840px) {
+  .use-case-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 
   <style id="vatsorted-pricing-badge-fix">
@@ -1515,6 +1611,51 @@
 
 
     
+
+
+
+
+
+
+<section id="anonymised-user-feedback" class="use-case-section">
+  <div class="use-case-wrapper">
+    <div class="use-case-heading">
+      <span class="use-case-kicker">User feedback</span>
+      <h2>How it helped others...</h2>
+      <p>Feedback from VAT document preparation workflows using VATSorted.</p>
+    </div>
+
+    <div class="use-case-grid">
+      <div class="use-case-card">
+        <span class="use-case-kicker">Accountancy practice</span>
+        <h3>Saved on staff costs</h3>
+
+        <blockquote class="use-case-quote">
+          “VATSorted helped us cut down the time spent preparing messy client VAT paperwork before review. That means fewer staff hours spent on low-level admin and more time focused on actual bookkeeping and VAT work. In the current cost environment, that is a real operational benefit.”
+        </blockquote>
+
+        <p class="use-case-person">
+          <strong>Sarah H</strong><br>
+          Director, UK accountancy firm
+        </p>
+      </div>
+
+      <div class="use-case-card">
+        <span class="use-case-kicker">VAT-registered business</span>
+        <h3>Cleaner VAT paperwork before review</h3>
+
+                <blockquote class="use-case-quote">
+          “Before VATSorted, preparing VAT paperwork meant digging through emails, downloads, and supplier folders. VATSorted made it easier to keep everything organised for Making Tax Digital, instead of leaving VAT paperwork scattered across emails, downloads, and supplier folders.”
+        </blockquote>
+
+        <p class="use-case-person">
+          <strong>John S</strong><br>
+          Director, UK business
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="page" id="privacy">

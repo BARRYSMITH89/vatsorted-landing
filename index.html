@@ -872,8 +872,6 @@
   
 
 
-
-
 /* Real-world use case section */
 .use-case-section {
   padding: 72px 24px;
@@ -1066,7 +1064,12 @@
   background: #000;
 }
 
-</style>
+
+    #demo {
+      scroll-margin-top: 120px;
+    }
+
+  </style>
 
   <style id="vatsorted-pricing-badge-fix">
     .planned-price {
@@ -1383,7 +1386,6 @@
         <a href="#demo">Demo</a>
         <a href="#privacy">Privacy</a>
         <a href="#pricing">Pricing</a>
-        <a href="#Practice-workflow">Accountants &amp; Bookkeepers</a>
       </nav>
     </div>
   </header>
@@ -1475,32 +1477,81 @@
 <!-- VATSorted audience sections END -->
 
 
-    <section class="page product-showcase" id="product-preview">
-      <div class="section-heading">
-        <h2>
-          Turn mixed VAT documents into a
-          clear review workflow.
-        </h2>
+    
+
+
+    
+<section class="section walkthrough-section" id="product-walkthroughs">
+      <div class="section-header">
+        <p id="demo" class="eyebrow">Product demo videos</p>
+        <h2>See the workflow.</h2>
         <p>
-          VATSorted separates invoices, statements, pro formas, and review items
-          into organised VAT-quarter folders, then creates a structured export for review.
+          Upload documents, run the scan, review uncertain files, and export a cleaner ZIP pack.
         </p>
       </div>
 
-      <div class="large-product-shot">
-        <img
-          src="assets/screenshots/dashboard-overview-hero.png"
-          alt="VATSorted dashboard showing sorted VAT documents by category and VAT quarter"
-          loading="eager"
-        />
-      </div>
-    </section>
+      <div class="walkthrough-video-grid">
+        <article class="walkthrough-video-card">
+          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
+              <source src="assets/videos/manual-upload-walkthrough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          <p class="step-label">Step 1</p>
+            <h3>Upload documents</h3>
+          <p>
+            Add PDFs and ZIP files ready for sorting.
+          </p>
+          <p class="video-note">Short walkthrough video</p>
+        </article>
 
-    <section class="page" id="features">
+        <article class="walkthrough-video-card">
+          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
+              <source src="assets/videos/manual-upload-processing.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          <p class="step-label">Step 2</p>
+            <h3>Process uploaded documents</h3>
+          <p>
+            Run the scan and organise documents into VAT quarters and review folders.
+          </p>
+          <p class="video-note">Short walkthrough video</p>
+        </article>
+
+        <article class="walkthrough-video-card">
+          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
+              <source src="assets/videos/review-walkthrough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          <p class="step-label">Step 3</p>
+            <h3>Review sorted documents</h3>
+          <p>
+            Check separated invoices, statements, pro formas, and review items before export.
+          </p>
+          <p class="video-note">Short walkthrough video</p>
+        </article>
+      
+          <article class="walkthrough-video-card">
+            <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
+              <source src="assets/videos/export-walkthrough.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="step-label">Step 4</p>
+            <h3>Export accountant-ready ZIP pack</h3>
+            <p>Create the final structured ZIP pack for accountant review or VAT preparation.</p>
+            <p class="video-note">Short walkthrough video</p>
+          </article>
+
+</div>
+
+      <p class="walkthrough-full-guide">
+        A full setup walkthrough will be available inside VATSorted for customers who need more detailed guidance.
+      </p>
+    </section>
+<section class="page" id="features">
       <div class="section-title">
-        <h2>Built for the paperwork before VAT review.</h2>
+        <h2>What VATSorted does.</h2>
         <p>
-          VATSorted helps collect, sort, and prepare VAT documents before accountant review, bookkeeping, or VAT return work. It does not replace your accountant, give tax advice, or submit VAT returns.
+          VATSorted collects VAT documents, scans optional email attachments, sorts files by VAT quarter, separates review items, and creates a structured ZIP export.
         </p>
       </div>
 
@@ -1539,8 +1590,8 @@
 
     <section class="page" id="workflow">
       <div class="section-title">
-        <h2>How it works.</h2>
-        <p>From scattered VAT documents to a structured review-ready ZIP export.</p>
+        <h2>How VATSorted works.</h2>
+        <p>A simple workflow from upload to accountant-ready export.</p>
       </div>
 
       <div class="workflow-screenshot-card">
@@ -1586,52 +1637,8 @@
       </div>
     </section>
 
-    <section class="page output-preview-section" id="output-preview">
-      <div class="section-title">
-        <h2>From messy files to structured review folders.</h2>
-        <p>
-          VATSorted turns scattered PDFs, ZIP uploads, and email attachments into organised review folders and a cleaner ZIP export.
-        </p>
-      </div>
+    
 
-      <div class="output-preview-grid">
-        <div class="output-preview-card">
-          <span class="output-preview-label">1. Before</span>
-          <h3>Messy source files</h3>
-          <pre>Downloads/
-  supplier_invoice.pdf
-  fuel_receipt.pdf
-  bank_statement.pdf
-  proforma_order.pdf
-  unknown_receipt.pdf</pre>
-        </div>
-
-        <div class="output-preview-card">
-          <span class="output-preview-label">2. Sorted</span>
-          <h3>Organised review folders</h3>
-          <pre>Q1_2026/
-  Valid invoices/
-  Needs review/
-  Statements/
-  Pro forma/
-  Unknown date/quarter/</pre>
-        </div>
-
-        <div class="output-preview-card">
-          <span class="output-preview-label">3. Export</span>
-          <h3>Structured ZIP export</h3>
-          <pre>VATSorted_Q1_2026.zip
-  summary.csv
-  organised PDFs
-  review folders
-  review-ready pack</pre>
-        </div>
-      </div>
-
-      <p class="small-note">
-        VATSorted prepares the document export. VAT treatment, bookkeeping decisions, and VAT return submission remain with the accountant, bookkeeper, or business.
-      </p>
-    </section>
 
     <section class="page review-first-section" id="review-first">
       <div class="section-title">
@@ -1664,80 +1671,10 @@
     </section>
 
 
-        <section class="section walkthrough-section" id="product-walkthroughs">
-      <div class="section-header">
-        <p class="eyebrow">Product demo videos</p>
-        <h2>See VATSorted in action.</h2>
-        <p>
-          Follow the VATSorted workflow from document upload to accountant-ready export.
-        </p>
-      </div>
-
-      <div class="walkthrough-video-grid">
-        <article class="walkthrough-video-card">
-          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
-              <source src="assets/videos/manual-upload-walkthrough.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          <p class="step-label">Step 1</p>
-            <h3>Upload documents</h3>
-          <p>
-            See how PDFs and ZIP files are added to VATSorted ready for document sorting.
-          </p>
-          <p class="video-note">Short walkthrough video</p>
-        </article>
-
-        <article class="walkthrough-video-card">
-          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
-              <source src="assets/videos/manual-upload-processing.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          <p class="step-label">Step 2</p>
-            <h3>Process uploaded documents</h3>
-          <p>
-            See VATSorted run the scan and organise documents into VAT quarters and review folders.
-          </p>
-          <p class="video-note">Short walkthrough video</p>
-        </article>
-
-        <article class="walkthrough-video-card">
-          <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
-              <source src="assets/videos/review-walkthrough.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          <p class="step-label">Step 3</p>
-            <h3>Review sorted documents</h3>
-          <p>
-            See how VATSorted separates valid invoices, needs-review items, statements, pro formas, and unknown-quarter documents before export.
-          </p>
-          <p class="video-note">Short walkthrough video</p>
-        </article>
-      
-          <article class="walkthrough-video-card">
-            <video controls preload="metadata" playsinline style="width:100%; aspect-ratio:16/9; display:block; border-radius:18px; object-fit:cover; background:#06251f; border:1px solid rgba(16, 185, 129, 0.25);">
-              <source src="assets/videos/export-walkthrough.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p class="step-label">Step 4</p>
-            <h3>Export accountant-ready ZIP pack</h3>
-            <p>See how VATSorted creates the final ZIP pack so files can be sent to an accountant or used for VAT preparation.</p>
-            <p class="video-note">Short walkthrough video</p>
-          </article>
-
-</div>
-
-      <p class="walkthrough-full-guide">
-        A full setup walkthrough will be available inside VATSorted for customers who need more detailed guidance.
-      </p>
-    </section>
-
+        
 
 
     
-
-
-
-
 
 
 <section id="anonymised-user-feedback" class="use-case-section">

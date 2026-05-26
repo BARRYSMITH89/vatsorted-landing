@@ -1069,6 +1069,43 @@
       scroll-margin-top: 120px;
     }
 
+  
+    .dual-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+  
+    .cta-pair {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .static-early-access-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.35rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(11, 61, 46, 0.18);
+      background: #ffffff;
+      color: #0b3d2e;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(12, 42, 31, 0.08);
+      min-height: 3.25rem;
+    }
+
+    .static-early-access-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(12, 42, 31, 0.12);
+    }
+
   </style>
 
   <style id="vatsorted-pricing-badge-fix">
@@ -1413,8 +1450,8 @@
         </p>
 
         <div class="buttons">
-          <a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
-          <a class="button secondary" href="#workflow">See how it works</a>
+          <span class="cta-pair"><a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener" data-booking-cta="true">Book a free expert call</a>
+        <a class="static-early-access-button" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener noreferrer" data-static-cta="true">Request early access</a></span>
         </div>
       </div>
 
@@ -1677,6 +1714,45 @@
     
 
 
+<section class="page" id="privacy">
+      <div class="section-title">
+        <h2>Local-first by design.</h2>
+        <p>
+          VATSorted runs on your own computer and creates review folders locally. Email scanning is optional, and manual upload is always available.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Runs on your computer</h3>
+          <p>VATSorted opens in your browser but runs locally on your computer. Your working folders stay on your computer.</p>
+          <ul class="trust-list">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Email scanning is optional</h3>
+          <p>Connect Gmail or Outlook to find VAT-related attachments, or use manual upload if you prefer not to connect email.</p>
+          <ul class="trust-list">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Preparation, not filing</h3>
+          <p>VATSorted organises documents into review folders and exports a ZIP file. It does not submit VAT returns or replace accountant, bookkeeper, or business review.</p>
+          <ul class="trust-list">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
 <section id="anonymised-user-feedback" class="use-case-section">
   <div class="use-case-wrapper">
     <div class="use-case-heading">
@@ -1716,45 +1792,6 @@
     </div>
   </div>
 </section>
-
-
-<section class="page" id="privacy">
-      <div class="section-title">
-        <h2>Local-first by design.</h2>
-        <p>
-          VATSorted runs on your own computer and creates review folders locally. Email scanning is optional, and manual upload is always available.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Runs on your computer</h3>
-          <p>VATSorted opens in your browser but runs locally on your computer. Your working folders stay on your computer.</p>
-          <ul class="trust-list">
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Email scanning is optional</h3>
-          <p>Connect Gmail or Outlook to find VAT-related attachments, or use manual upload if you prefer not to connect email.</p>
-          <ul class="trust-list">
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Preparation, not filing</h3>
-          <p>VATSorted organises documents into review folders and exports a ZIP file. It does not submit VAT returns or replace accountant, bookkeeper, or business review.</p>
-          <ul class="trust-list">
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
     <section class="page" id="pricing">
       <div class="section-title">
@@ -1842,7 +1879,6 @@
       </p>
 
       <div class="buttons pricing-action">
-        <a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
       </div>
     </section>
 <section class="page">
@@ -1852,7 +1888,8 @@
           <p>Built for UK businesses, accountants, and bookkeepers who want cleaner VAT document packs before review.</p>
         </div>
 
-        <a class="button" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
+        <span class="cta-pair"><a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener" data-booking-cta="true">Book a free expert call</a>
+        <a class="static-early-access-button" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener noreferrer" data-static-cta="true">Request early access</a></span>
       </div>
     </section>
   </main>
@@ -2008,8 +2045,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-<!-- VATSorted CTA audience override start -->
-<script>
+<script id="vatsorted-safe-booking-cta-labels">
 (function () {
   const meetingUrl = "https://meetings-na2.hubspot.com/barry-smith";
 
@@ -2018,126 +2054,37 @@ document.addEventListener("DOMContentLoaded", function () {
     accountants: "Book a free expert call"
   };
 
-  let lastAudience = "accountants";
-
-  function cleanText(el) {
-    return (el.textContent || "").replace(/\s+/g, " ").trim();
+  function selectedAudience() {
+    const active = document.querySelector("[data-audience-target].is-active");
+    return active ? active.dataset.audienceTarget : "accountants";
   }
 
-  function isAudienceToggle(el) {
-    const text = cleanText(el).toLowerCase();
-    return (
-      text.includes("business owner") ||
-      text.includes("businesses") ||
-      text.includes("accountants") ||
-      text.includes("bookkeepers") ||
-      text.includes("accountancy")
-    );
-  }
+  function updateBookingButtons(key) {
+    const label = labels[key] || labels.accountants;
 
-  function detectAudience() {
-    const possibleToggles = Array.from(
-      document.querySelectorAll("button, a, [role='button'], [data-audience], [data-tab]")
-    ).filter(isAudienceToggle);
-
-    const activeToggle = possibleToggles.find((el) => {
-      const className = String(el.className || "");
-      return (
-        el.getAttribute("aria-pressed") === "true" ||
-        el.getAttribute("aria-selected") === "true" ||
-        /(active|selected|current|is-active)/i.test(className)
-      );
-    });
-
-    if (activeToggle) {
-      const activeText = cleanText(activeToggle).toLowerCase();
-
-      if (activeText.includes("business")) {
-        lastAudience = "business";
-        
-        return lastAudience;
-      }
-
-      if (
-        activeText.includes("accountants") ||
-        activeText.includes("bookkeepers") ||
-        activeText.includes("accountancy")
-      ) {
-        lastAudience = "accountants";
-        
-        return lastAudience;
-      }
-    }
-
-    return lastAudience;
-  }
-
-  function isPrimaryCta(el) {
-    const text = cleanText(el);
-    const href = el.getAttribute ? (el.getAttribute("href") || "") : "";
-
-    if (/tally\.so|meetings-na2\.hubspot\.com|meetings\.hubspot\.com/i.test(href)) {
-      return true;
-    }
-
-    return /^(Request early access|Book a quick call|Book a free accountant call|Book a free expert call|Book a free VATSorted walkthrough|Book a quick VATSorted call)$/i.test(text);
-  }
-
-  function updateCtas() {
-    const audience = detectAudience();
-    const label = labels[audience] || labels.accountants;
-
-    Array.from(document.querySelectorAll("a, button")).forEach((el) => {
-      if (!isPrimaryCta(el)) return;
-
-      if (cleanText(el) !== label) {
-        el.textContent = label;
-      }
-
-      if (el.getAttribute("aria-label") !== label) {
-        el.setAttribute("aria-label", label);
-      }
-
-      if (el.tagName && el.tagName.toLowerCase() === "a") {
-        if (el.getAttribute("href") !== meetingUrl) {
-          el.setAttribute("href", meetingUrl);
-        }
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener");
-      }
+    document.querySelectorAll('[data-booking-cta="true"]').forEach(function (button) {
+      button.textContent = label;
+      button.setAttribute("href", meetingUrl);
+      button.setAttribute("target", "_blank");
+      button.setAttribute("rel", "noopener");
+      button.classList.add("button", "primary");
+      button.classList.remove("secondary");
     });
   }
 
-  document.addEventListener("click", function (event) {
-    const el = event.target.closest("button, a, [role='button']");
-    if (!el) return;
+  document.addEventListener("DOMContentLoaded", function () {
+    updateBookingButtons(selectedAudience());
 
-    const text = cleanText(el).toLowerCase();
-
-    if (text.includes("business owner") || text.includes("businesses")) {
-      lastAudience = "business";
-      
-      setTimeout(updateCtas, 100);
-    }
-
-    if (
-      text.includes("accountants") ||
-      text.includes("bookkeepers") ||
-      text.includes("accountancy")
-    ) {
-      lastAudience = "accountants";
-      
-      setTimeout(updateCtas, 100);
-    }
-  }, true);
-
-  document.addEventListener("DOMContentLoaded", updateCtas);
-  setTimeout(updateCtas, 0);
-  setTimeout(updateCtas, 250);
-  setTimeout(updateCtas, 1000);
+    document.querySelectorAll("[data-audience-target]").forEach(function (toggle) {
+      toggle.addEventListener("click", function () {
+        setTimeout(function () {
+          updateBookingButtons(toggle.dataset.audienceTarget);
+        }, 0);
+      });
+    });
+  });
 })();
 </script>
-<!-- VATSorted CTA audience override end -->
 
 </body>
 </html>

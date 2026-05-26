@@ -1053,6 +1053,19 @@
   }
 }
 
+
+/* VATSorted marketing section videos */
+.feature-video {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  max-height: 380px;
+  display: block;
+  border-radius: 1.25rem;
+  object-fit: contain;
+  background: #000;
+}
+
 </style>
 
   <style id="vatsorted-pricing-badge-fix">
@@ -1398,7 +1411,7 @@
         </p>
 
         <div class="buttons">
-          <a class="button primary" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener">Request early access</a>
+          <a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
           <a class="button secondary" href="#workflow">See how it works</a>
         </div>
       </div>
@@ -1430,10 +1443,10 @@
       </ul>
     </div>
     <div class="audience-video-placeholder">
-        <video class="audience-video-file" controls preload="metadata" playsinline>
-  <source src="assets/videos/for-businesses.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+        <video class="feature-video" controls preload="metadata" playsinline>
+              <source src="assets/videos/for-businesses.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
       </div>
   </div>
 </section>
@@ -1452,7 +1465,10 @@
       </ul>
     </div>
     <div class="audience-video-placeholder">
-      Accountant / bookkeeper video placeholder
+      <video class="feature-video" controls preload="metadata" playsinline>
+              <source src="assets/videos/for-accountants.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
     </div>
   </div>
 </section>
@@ -1889,7 +1905,7 @@
       </p>
 
       <div class="buttons pricing-action">
-        <a class="button primary" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener">Request early access</a>
+        <a class="button primary" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
       </div>
     </section>
 <section class="page">
@@ -1899,7 +1915,7 @@
           <p>Built for UK businesses, accountants, and bookkeepers who want cleaner VAT document packs before review.</p>
         </div>
 
-        <a class="button" href="https://tally.so/r/ODdgvR" target="_blank" rel="noopener">Request early access</a>
+        <a class="button" href="https://meetings-na2.hubspot.com/barry-smith" target="_blank" rel="noopener">Book a free expert call</a>
       </div>
     </section>
   </main>
@@ -2053,6 +2069,138 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /* VATSorted dynamic video order END */
 </script>
+
+
+<!-- VATSorted CTA audience override start -->
+<script>
+(function () {
+  const meetingUrl = "https://meetings-na2.hubspot.com/barry-smith";
+
+  const labels = {
+    business: "Book a free accountant call",
+    accountants: "Book a free expert call"
+  };
+
+  let lastAudience = "accountants";
+
+  function cleanText(el) {
+    return (el.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function isAudienceToggle(el) {
+    const text = cleanText(el).toLowerCase();
+    return (
+      text.includes("business owner") ||
+      text.includes("businesses") ||
+      text.includes("accountants") ||
+      text.includes("bookkeepers") ||
+      text.includes("accountancy")
+    );
+  }
+
+  function detectAudience() {
+    const possibleToggles = Array.from(
+      document.querySelectorAll("button, a, [role='button'], [data-audience], [data-tab]")
+    ).filter(isAudienceToggle);
+
+    const activeToggle = possibleToggles.find((el) => {
+      const className = String(el.className || "");
+      return (
+        el.getAttribute("aria-pressed") === "true" ||
+        el.getAttribute("aria-selected") === "true" ||
+        /(active|selected|current|is-active)/i.test(className)
+      );
+    });
+
+    if (activeToggle) {
+      const activeText = cleanText(activeToggle).toLowerCase();
+
+      if (activeText.includes("business")) {
+        lastAudience = "business";
+        
+        return lastAudience;
+      }
+
+      if (
+        activeText.includes("accountants") ||
+        activeText.includes("bookkeepers") ||
+        activeText.includes("accountancy")
+      ) {
+        lastAudience = "accountants";
+        
+        return lastAudience;
+      }
+    }
+
+    return lastAudience;
+  }
+
+  function isPrimaryCta(el) {
+    const text = cleanText(el);
+    const href = el.getAttribute ? (el.getAttribute("href") || "") : "";
+
+    if (/tally\.so|meetings-na2\.hubspot\.com|meetings\.hubspot\.com/i.test(href)) {
+      return true;
+    }
+
+    return /^(Request early access|Book a quick call|Book a free accountant call|Book a free expert call|Book a free VATSorted walkthrough|Book a quick VATSorted call)$/i.test(text);
+  }
+
+  function updateCtas() {
+    const audience = detectAudience();
+    const label = labels[audience] || labels.accountants;
+
+    Array.from(document.querySelectorAll("a, button")).forEach((el) => {
+      if (!isPrimaryCta(el)) return;
+
+      if (cleanText(el) !== label) {
+        el.textContent = label;
+      }
+
+      if (el.getAttribute("aria-label") !== label) {
+        el.setAttribute("aria-label", label);
+      }
+
+      if (el.tagName && el.tagName.toLowerCase() === "a") {
+        if (el.getAttribute("href") !== meetingUrl) {
+          el.setAttribute("href", meetingUrl);
+        }
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+      }
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    const el = event.target.closest("button, a, [role='button']");
+    if (!el) return;
+
+    const text = cleanText(el).toLowerCase();
+
+    if (text.includes("business owner") || text.includes("businesses")) {
+      lastAudience = "business";
+      
+      setTimeout(updateCtas, 100);
+    }
+
+    if (
+      text.includes("accountants") ||
+      text.includes("bookkeepers") ||
+      text.includes("accountancy")
+    ) {
+      lastAudience = "accountants";
+      
+      setTimeout(updateCtas, 100);
+    }
+  }, true);
+
+  document.addEventListener("DOMContentLoaded", updateCtas);
+  setTimeout(updateCtas, 0);
+  setTimeout(updateCtas, 250);
+  setTimeout(updateCtas, 1000);
+})();
+</script>
+<!-- VATSorted CTA audience override end -->
 
 </body>
 </html>
